@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import './section.css';
+import { SectionContainer, SectionTitle } from './Section.styled';
 
 export default class Section extends Component {
   render() {
     return (
-      <div className="section">
-        <h2 className="section-title">{this.props.title}</h2>
+      <SectionContainer>
+        <SectionTitle>{this.props.title}</SectionTitle>
+
         {this.props.children}
-      </div>
+      </SectionContainer>
     );
   }
 }

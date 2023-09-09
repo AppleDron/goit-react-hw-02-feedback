@@ -1,9 +1,11 @@
-.feedback-options {
+import styled from 'styled-components';
+
+export const FeedbackOptionsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-}
+`;
 
-button {
+export const FeedbackOptionsButton = styled.button`
   background-color: teal;
   border-radius: 8px;
   border-style: none;
@@ -15,9 +17,8 @@ button {
   padding: 10px 16px;
   text-align: center;
   transition: color 100ms;
-}
 
-button:hover,
-button:focus {
-  background-color: cadetblue;
-}
+  &:hover {
+    background-color: cadetblue;
+  }
+`;

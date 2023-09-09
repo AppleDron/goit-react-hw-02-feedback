@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import './FeedbackOptions.css';
+import {
+  FeedbackOptionsButton,
+  FeedbackOptionsContainer,
+} from './FeedbackOptions.styled';
 
 export default class FeedbackOptions extends Component {
   handleClick = e => {
@@ -9,17 +12,17 @@ export default class FeedbackOptions extends Component {
   render() {
     return (
       <>
-        <div className="feedback-options">
-          <button name="good" onClick={this.handleClick}>
+        <FeedbackOptionsContainer>
+          <FeedbackOptionsButton name="good" onClick={this.handleClick}>
             Good
-          </button>
-          <button name="neutral" onClick={this.handleClick}>
+          </FeedbackOptionsButton>
+          <FeedbackOptionsButton name="neutral" onClick={this.handleClick}>
             Neutral
-          </button>
-          <button name="bad" onClick={this.handleClick}>
+          </FeedbackOptionsButton>
+          <FeedbackOptionsButton name="bad" onClick={this.handleClick}>
             Bad
-          </button>
-        </div>
+          </FeedbackOptionsButton>
+        </FeedbackOptionsContainer>
       </>
     );
   }
